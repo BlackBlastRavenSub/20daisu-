@@ -1,0 +1,578 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
+package com.app.start.number20daisustart;
+
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface.OnClickListener;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.NumberPicker;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.NumberPicker.OnValueChangeListener;
+import java.util.Random;
+import net.app_c.cloud.sdk.AppCCloud;
+
+public class MainActivity extends AppCompatActivity {
+    private AppCCloud appCCloud;
+    private NumberPicker NumberPicker1;
+    private NumberPicker NumberPicker2;
+    private NumberPicker NumberPicker3;
+    private NumberPicker NumberPicker4;
+    private NumberPicker NumberPicker5;
+    private NumberPicker NumberPicker6;
+    private NumberPicker NumberPicker7;
+    private NumberPicker NumberPicker8;
+    private NumberPicker NumberPicker9;
+    private NumberPicker NumberPicker10;
+    private NumberPicker NumberPicker11;
+    private NumberPicker NumberPicker12;
+    private NumberPicker NumberPicker13;
+    private NumberPicker NumberPicker14;
+    private NumberPicker NumberPicker15;
+    private NumberPicker NumberPicker16;
+    private NumberPicker NumberPicker17;
+    private NumberPicker NumberPicker18;
+    private NumberPicker NumberPicker19;
+    private NumberPicker NumberPicker20;
+    int[] count = new int[]{5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5};
+
+    public MainActivity() {
+    }
+
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        this.setContentView(2130968601);
+        this.appCCloud = (new AppCCloud(this)).start();
+        RelativeLayout layout = (RelativeLayout)this.findViewById(2131558519);
+        layout.addView(this.appCCloud.Ad.loadSimpleView("red", "black"));
+    }
+
+    public void finish() {
+        super.finish();
+        this.appCCloud.finish();
+    }
+
+    protected void onResume() {
+        super.onResume();
+        this.appCCloud.Ad.initCutin();
+    }
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == 4) {
+            this.appCCloud.Ad.callCutinFinish();
+            return false;
+        } else {
+            return super.onKeyDown(keyCode, event);
+        }
+    }
+
+    public void onClick(View view) {
+        switch(view.getId()) {
+        case 2131558521:
+            this.diceroll(view);
+            break;
+        case 2131558522:
+            this.setContentView(2130968626);
+            TextView t2 = (TextView)this.findViewById(2131558567);
+            t2.setText("合計確立を100%にしてください");
+            t2.setTextSize(30.0F);
+        case 2131558523:
+        case 2131558524:
+        case 2131558525:
+        case 2131558526:
+        case 2131558527:
+        case 2131558528:
+        case 2131558529:
+        case 2131558530:
+        case 2131558531:
+        case 2131558532:
+        case 2131558533:
+        case 2131558534:
+        case 2131558535:
+        case 2131558536:
+        case 2131558537:
+        case 2131558538:
+        case 2131558539:
+        case 2131558540:
+        case 2131558541:
+        case 2131558542:
+        case 2131558543:
+        case 2131558544:
+        case 2131558545:
+        case 2131558546:
+        case 2131558547:
+        case 2131558548:
+        case 2131558549:
+        case 2131558550:
+        case 2131558551:
+        case 2131558552:
+        case 2131558553:
+        case 2131558554:
+        case 2131558555:
+        case 2131558556:
+        case 2131558557:
+        case 2131558558:
+        case 2131558559:
+        case 2131558560:
+        case 2131558561:
+        case 2131558562:
+        case 2131558563:
+        case 2131558564:
+        case 2131558565:
+        case 2131558566:
+        case 2131558567:
+        default:
+            break;
+        case 2131558568:
+            if(100 != this.count[0] + this.count[1] + this.count[2] + this.count[3] + this.count[4] + this.count[5] + this.count[6] + this.count[7] + this.count[8] + this.count[9] + this.count[10] + this.count[11] + this.count[12] + this.count[13] + this.count[14] + this.count[15] + this.count[16] + this.count[17] + this.count[18] + this.count[19]) {
+                (new Builder(this)).setTitle("エラー").setMessage("合計確率を100%にしてください").setPositiveButton("OK", (OnClickListener)null).show();
+            } else {
+                this.setContentView(2130968601);
+                this.setContentView(2130968601);
+                RelativeLayout layout = (RelativeLayout)this.findViewById(2131558519);
+                layout.addView(this.appCCloud.Ad.loadSimpleView("red", "black"));
+            }
+            break;
+        case 2131558569:
+            View rink1 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker1 = (NumberPicker)rink1.findViewById(2131558557);
+            this.NumberPicker1.setMaxValue(100);
+            this.NumberPicker1.setMinValue(0);
+            this.NumberPicker1.setValue(this.count[0]);
+            (new Builder(this)).setView(rink1).show();
+            this.count[0] = this.NumberPicker1.getValue();
+            this.NumberPicker1.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[0] = MainActivity.this.NumberPicker1.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+            break;
+        case 2131558570:
+            View rink5 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker5 = (NumberPicker)rink5.findViewById(2131558557);
+            this.NumberPicker5.setMaxValue(100);
+            this.NumberPicker5.setMinValue(0);
+            this.NumberPicker5.setValue(this.count[4]);
+            (new Builder(this)).setView(rink5).show();
+            this.count[4] = this.NumberPicker5.getValue();
+            this.NumberPicker5.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[4] = MainActivity.this.NumberPicker5.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+            break;
+        case 2131558571:
+            View rink9 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker9 = (NumberPicker)rink9.findViewById(2131558557);
+            this.NumberPicker9.setMaxValue(100);
+            this.NumberPicker9.setMinValue(0);
+            this.NumberPicker9.setValue(this.count[8]);
+            (new Builder(this)).setView(rink9).show();
+            this.count[8] = this.NumberPicker9.getValue();
+            this.NumberPicker9.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[8] = MainActivity.this.NumberPicker9.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+            break;
+        case 2131558572:
+            View rink6 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker6 = (NumberPicker)rink6.findViewById(2131558557);
+            this.NumberPicker6.setMaxValue(100);
+            this.NumberPicker6.setMinValue(0);
+            this.NumberPicker6.setValue(this.count[5]);
+            (new Builder(this)).setView(rink6).show();
+            this.count[5] = this.NumberPicker6.getValue();
+            this.NumberPicker6.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[5] = MainActivity.this.NumberPicker6.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+            break;
+        case 2131558573:
+            View rink13 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker13 = (NumberPicker)rink13.findViewById(2131558557);
+            this.NumberPicker13.setMaxValue(100);
+            this.NumberPicker13.setMinValue(0);
+            this.NumberPicker13.setValue(this.count[12]);
+            (new Builder(this)).setView(rink13).show();
+            this.count[12] = this.NumberPicker13.getValue();
+            this.NumberPicker13.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[12] = MainActivity.this.NumberPicker13.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+            break;
+        case 2131558574:
+            View rink10 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker10 = (NumberPicker)rink10.findViewById(2131558557);
+            this.NumberPicker10.setMaxValue(100);
+            this.NumberPicker10.setMinValue(0);
+            this.NumberPicker10.setValue(this.count[9]);
+            (new Builder(this)).setView(rink10).show();
+            this.count[9] = this.NumberPicker10.getValue();
+            this.NumberPicker10.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[9] = MainActivity.this.NumberPicker10.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+            break;
+        case 2131558575:
+            View rink17 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker17 = (NumberPicker)rink17.findViewById(2131558557);
+            this.NumberPicker17.setMaxValue(100);
+            this.NumberPicker17.setMinValue(0);
+            this.NumberPicker17.setValue(this.count[16]);
+            (new Builder(this)).setView(rink17).show();
+            this.count[16] = this.NumberPicker17.getValue();
+            this.NumberPicker17.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[16] = MainActivity.this.NumberPicker17.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+            break;
+        case 2131558576:
+            View rink14 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker14 = (NumberPicker)rink14.findViewById(2131558557);
+            this.NumberPicker14.setMaxValue(100);
+            this.NumberPicker14.setMinValue(0);
+            this.NumberPicker14.setValue(this.count[13]);
+            (new Builder(this)).setView(rink14).show();
+            this.count[13] = this.NumberPicker14.getValue();
+            this.NumberPicker14.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[13] = MainActivity.this.NumberPicker14.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+            break;
+        case 2131558577:
+            View rink2 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker2 = (NumberPicker)rink2.findViewById(2131558557);
+            this.NumberPicker2.setMaxValue(100);
+            this.NumberPicker2.setMinValue(0);
+            this.NumberPicker2.setValue(this.count[1]);
+            (new Builder(this)).setView(rink2).show();
+            this.count[1] = this.NumberPicker2.getValue();
+            this.NumberPicker2.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[1] = MainActivity.this.NumberPicker2.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+            break;
+        case 2131558578:
+            View rink18 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker18 = (NumberPicker)rink18.findViewById(2131558557);
+            this.NumberPicker18.setMaxValue(100);
+            this.NumberPicker18.setMinValue(0);
+            this.NumberPicker18.setValue(this.count[17]);
+            (new Builder(this)).setView(rink18).show();
+            this.count[17] = this.NumberPicker18.getValue();
+            this.NumberPicker18.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[17] = MainActivity.this.NumberPicker18.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+            break;
+        case 2131558579:
+            View rink3 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker3 = (NumberPicker)rink3.findViewById(2131558557);
+            this.NumberPicker3.setMaxValue(100);
+            this.NumberPicker3.setMinValue(0);
+            this.NumberPicker3.setValue(this.count[2]);
+            (new Builder(this)).setView(rink3).show();
+            this.count[2] = this.NumberPicker3.getValue();
+            this.NumberPicker3.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[2] = MainActivity.this.NumberPicker3.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+            break;
+        case 2131558580:
+            View rink7 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker7 = (NumberPicker)rink7.findViewById(2131558557);
+            this.NumberPicker7.setMaxValue(100);
+            this.NumberPicker7.setMinValue(0);
+            this.NumberPicker7.setValue(this.count[6]);
+            (new Builder(this)).setView(rink7).show();
+            this.count[6] = this.NumberPicker7.getValue();
+            this.NumberPicker7.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[6] = MainActivity.this.NumberPicker7.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+            break;
+        case 2131558581:
+            View rink11 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker11 = (NumberPicker)rink11.findViewById(2131558557);
+            this.NumberPicker11.setMaxValue(100);
+            this.NumberPicker11.setMinValue(0);
+            this.NumberPicker11.setValue(this.count[10]);
+            (new Builder(this)).setView(rink11).show();
+            this.count[10] = this.NumberPicker11.getValue();
+            this.NumberPicker11.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[10] = MainActivity.this.NumberPicker11.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+            break;
+        case 2131558582:
+            View rink15 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker15 = (NumberPicker)rink15.findViewById(2131558557);
+            this.NumberPicker15.setMaxValue(100);
+            this.NumberPicker15.setMinValue(0);
+            this.NumberPicker15.setValue(this.count[14]);
+            (new Builder(this)).setView(rink15).show();
+            this.count[14] = this.NumberPicker15.getValue();
+            this.NumberPicker15.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[14] = MainActivity.this.NumberPicker15.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+            break;
+        case 2131558583:
+            View rink19 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker19 = (NumberPicker)rink19.findViewById(2131558557);
+            this.NumberPicker19.setMaxValue(100);
+            this.NumberPicker19.setMinValue(0);
+            this.NumberPicker19.setValue(this.count[18]);
+            (new Builder(this)).setView(rink19).show();
+            this.count[18] = this.NumberPicker19.getValue();
+            this.NumberPicker19.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[18] = MainActivity.this.NumberPicker19.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+            break;
+        case 2131558584:
+            View rink4 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker4 = (NumberPicker)rink4.findViewById(2131558557);
+            this.NumberPicker4.setMaxValue(100);
+            this.NumberPicker4.setMinValue(0);
+            this.NumberPicker4.setValue(this.count[3]);
+            (new Builder(this)).setView(rink4).show();
+            this.count[3] = this.NumberPicker4.getValue();
+            this.NumberPicker4.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[3] = MainActivity.this.NumberPicker4.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+            break;
+        case 2131558585:
+            View rink12 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker12 = (NumberPicker)rink12.findViewById(2131558557);
+            this.NumberPicker12.setMaxValue(100);
+            this.NumberPicker12.setMinValue(0);
+            this.NumberPicker12.setValue(this.count[11]);
+            (new Builder(this)).setView(rink12).show();
+            this.count[11] = this.NumberPicker12.getValue();
+            this.NumberPicker12.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[11] = MainActivity.this.NumberPicker12.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+            break;
+        case 2131558586:
+            View rink8 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker8 = (NumberPicker)rink8.findViewById(2131558557);
+            this.NumberPicker8.setMaxValue(100);
+            this.NumberPicker8.setMinValue(0);
+            this.NumberPicker8.setValue(this.count[7]);
+            (new Builder(this)).setView(rink8).show();
+            this.count[7] = this.NumberPicker8.getValue();
+            this.NumberPicker8.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[7] = MainActivity.this.NumberPicker8.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+            break;
+        case 2131558587:
+            View rink16 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker16 = (NumberPicker)rink16.findViewById(2131558557);
+            this.NumberPicker16.setMaxValue(100);
+            this.NumberPicker16.setMinValue(0);
+            this.NumberPicker16.setValue(this.count[15]);
+            (new Builder(this)).setView(rink16).show();
+            this.count[15] = this.NumberPicker16.getValue();
+            this.NumberPicker16.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[15] = MainActivity.this.NumberPicker16.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+            break;
+        case 2131558588:
+            View rink20 = this.getLayoutInflater().inflate(2130968616, (ViewGroup)null);
+            this.NumberPicker20 = (NumberPicker)rink20.findViewById(2131558557);
+            this.NumberPicker20.setMaxValue(100);
+            this.NumberPicker20.setMinValue(0);
+            this.NumberPicker20.setValue(this.count[19]);
+            (new Builder(this)).setView(rink20).show();
+            this.count[19] = this.NumberPicker20.getValue();
+            this.NumberPicker20.setOnValueChangedListener(new OnValueChangeListener() {
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    MainActivity.this.count[19] = MainActivity.this.NumberPicker20.getValue();
+                    TextView t2 = (TextView)MainActivity.this.findViewById(2131558567);
+                    t2.setText(String.valueOf(MainActivity.this.count[0] + MainActivity.this.count[1] + MainActivity.this.count[2] + MainActivity.this.count[3] + MainActivity.this.count[4] + MainActivity.this.count[5] + MainActivity.this.count[6] + MainActivity.this.count[7] + MainActivity.this.count[8] + MainActivity.this.count[9] + MainActivity.this.count[10] + MainActivity.this.count[11] + MainActivity.this.count[12] + MainActivity.this.count[13] + MainActivity.this.count[14] + MainActivity.this.count[15] + MainActivity.this.count[16] + MainActivity.this.count[17] + MainActivity.this.count[18] + MainActivity.this.count[19]));
+                    t2.setTextSize(50.0F);
+                }
+            });
+        }
+
+    }
+
+    public void diceroll(View View) {
+        Random y = new Random();
+        int z = y.nextInt(100);
+        ++z;
+        int a = this.count[0];
+        int b = this.count[1];
+        int c = this.count[2];
+        int d = this.count[3];
+        int e = this.count[4];
+        int f = this.count[5];
+        int g = this.count[6];
+        int h = this.count[7];
+        int i = this.count[8];
+        int j = this.count[9];
+        int k = this.count[10];
+        int l = this.count[11];
+        int m = this.count[12];
+        int n = this.count[13];
+        int o = this.count[14];
+        int p = this.count[15];
+        int q = this.count[16];
+        int r = this.count[17];
+        int s = this.count[18];
+        int t = this.count[19];
+        if(100 != a + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t) {
+            (new Builder(this)).setTitle("エラー").setMessage("合計確率を100%にしてください").setPositiveButton("OK", (OnClickListener)null).show();
+        } else {
+            TextView t1;
+            if(z <= a) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("1");
+            } else if(z <= a + b) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("2");
+            } else if(z <= a + b + c) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("3");
+            } else if(z <= a + b + c + d) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("4");
+            } else if(z <= a + b + c + d + e) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("5");
+            } else if(z <= a + b + c + d + e + f) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("6");
+            } else if(z <= a + b + c + d + e + f + g) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("7");
+            } else if(z <= a + b + c + d + e + f + g + h) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("8");
+            } else if(z <= a + b + c + d + e + f + g + h + i) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("9");
+            } else if(z <= a + b + c + d + e + f + g + h + i + j) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("10");
+            } else if(z <= a + b + c + d + e + f + g + h + i + j + k) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("11");
+            } else if(z <= a + b + c + d + e + f + g + h + i + j + k + l) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("12");
+            } else if(z <= a + b + c + d + e + f + g + h + i + j + k + l + m) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("13");
+            } else if(z <= a + b + c + d + e + f + g + h + i + j + k + l + m + n) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("14");
+            } else if(z <= a + b + c + d + e + f + g + h + i + j + k + l + m + n + o) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("15");
+            } else if(z <= a + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("16");
+            } else if(z <= a + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("17");
+            } else if(z <= a + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("18");
+            } else if(z <= a + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("19");
+            } else if(z <= a + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t) {
+                t1 = (TextView)this.findViewById(2131558520);
+                t1.setText("20");
+            }
+        }
+
+    }
+}
